@@ -48,7 +48,7 @@ int main(){
 				scanf("%f", &x);
 				printf("Digite o valor de B\n");
 				scanf("%f", &y);
-				sqrt = pow(x, (1.0/y));
+				sqrt = pow(x, 1.0/y);
 				printf("O numero e: %.2e\n",sqrt);
 				break;
 			case 4:

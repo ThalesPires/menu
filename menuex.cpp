@@ -19,7 +19,7 @@ int main(){
 		scanf("%d", &i);	
 		switch(i){
 			case 1:
-        		printf("Digite um numero para vereficar se e par ou nao\n");
+        			printf("Digite um numero para vereficar se e par ou nao\n");
 				scanf("%d", &a);
 				printf("\n");
 				if(a % 2 == 0){

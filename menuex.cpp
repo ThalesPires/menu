@@ -8,7 +8,7 @@ int main(){
 	do	
 	{
 		printf("Digite um numero\n0 - sair\n1 - verificar par\n"
-		"2 - elevado\n3 - coxinha\n4 - pastel\n5 - empada\n"
+		"2 - elevado\n3 - Verificar raiz\n4 - pastel\n5 - empada\n"
 		"6 - batata frita\n7 - suco\n8 - coca cola\n9 - guarana\n10 - matricula em hexadecimal\n");
 		scanf("%d", &i);	
 		switch(i){

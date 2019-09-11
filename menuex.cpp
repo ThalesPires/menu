@@ -43,7 +43,7 @@ int main(){
 				break;
 			case 3:
 				int x, y;
-				double sqrt;;
+				double sqrt;
 				printf("Digite o valor de A\n");
 				scanf("%f", &x);
 				printf("Digite o valor de B\n");

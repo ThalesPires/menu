@@ -4,6 +4,11 @@
 int main(){
 	
 	int i;
+  int a;
+  float A;
+  int x;
+  int B, resultado;
+  float sqrt, y;
 	
 	do	
 	{
@@ -13,43 +18,38 @@ int main(){
 		scanf("%d", &i);	
 		switch(i){
 			case 1:
-				int a;
-        			printf("Digite um numero para vereficar se e par ou nao\n");
-				scanf("%d", &a);
+        printf("Digite um numero para vereficar se e par ou nao\n");
+			  scanf("%d", &a);
 				if(a % 2 == 0){
-					printf("este numero e par!\n");	
+				printf("este numero e par!\n");	
 				}
 				else{
-					printf("este numero e impar!\n");
+				printf("este numero e impar!\n");
 				}
 				break;
 			case 2:
-				float A;
-				int B, resultado;
 				printf("Digite o valor de A\n");
 				scanf("%f", &A);
 				if(A < 0){
-					printf("numero invalido\n");
-					break;
+				printf("numero invalido\n");
+				break;
 				}
 				printf("Digite o valor de B\n");
 				scanf("%d", &B);
 				if(B < 0){
-					printf("numero invalido\n");
-					break;
+				printf("numero invalido\n");
+			  break;
 				}
 				resultado = pow(A, B);
-				printf("O numero em notacao cientifica fica assim: %.2e\n",resultado);
+			  printf("O numero em notacao cientifica fica assim: %.2e\n",resultado);
 				break;
 			case 3:
-				int x, y;
-				double sqrt;
-				printf("Digite o valor de A\n");
-				scanf("%f", &x);
-				printf("Digite o valor de B\n");
+			  printf("Digite o valor de x\n");
+				scanf("%d", &x);
+				printf("Digite o valor de y\n");
 				scanf("%f", &y);
 				sqrt = pow(x, 1.0/y);
-				printf("O numero e: %.2e\n",sqrt);
+			  printf("O numero e: %.f\n", sqrt);
 				break;
 			case 4:
 				printf("pastel muito bom!\n");

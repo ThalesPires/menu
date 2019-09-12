@@ -1,64 +1,100 @@
 #include <stdio.h>
 #include <math.h>
+#include <locale.h>
 
 int main(){
 	
+	setlocale(LC_ALL, "Portuguese");
 	int i;
-	int a;
-	float A;
-	int x;
-	int B, resultado;
-	float sqrt, y;
 	
 	do	
 	{
-		printf("Digite um numero\n0 - sair\n1 - verificar par\n"
-		"2 - elevado\n3 - Verificar raiz\n4 - pastel\n5 - empada\n"
+		printf("Digite um numero\n0 - sair\n1 - verificar se é par\n"
+		"2 - elevar um número\n3 - Verificar a raiz\n4 - pastel\n5 - empada\n"
 		"6 - batata frita\n7 - suco\n8 - coca cola\n9 - guarana\n10 - matricula em hexadecimal\n");
 		scanf("%d", &i);	
 		switch(i){
 			case 1:
-        			printf("Digite um numero para vereficar se e par ou nao\n");
+				int a;
+        			printf("Digite um numero para vereficar se é par ou nao\n");
 			  	scanf("%d", &a);
 				if(a % 2 == 0){
-				printf("este numero e par!\n");	
+				printf("este numero é par!\n");	
 				}
 				else{
-				printf("este numero e impar!\n");
+				printf("este numero é impar!\n");
 				}
 				break;
 			case 2:
+				float A;
+				int B, resultado;
 				printf("Digite o valor de A\n");
 				scanf("%f", &A);
 				if(A < 0){
-				printf("numero invalido\n");
+				printf("número invalido\n");
 				break;
 				}
 				printf("Digite o valor de B\n");
 				scanf("%d", &B);
 				if(B < 0){
-				printf("numero invalido\n");
+				printf("número inválido\n");
 			  	break;
 				}
 				resultado = pow(A, B);
-			  	printf("O numero em notacao cientifica fica assim: %.2e\n",resultado);
+			  	printf("O numero em notação científica é: %.2e\n",resultado);
 				break;
 			case 3:
-			  	printf("Digite o valor de x\n");
+				int x;
+				float y, raiz;
+				printf("Digite o valor de x\n");
 				scanf("%d", &x);
 				printf("Digite o valor de y\n");
 				scanf("%f", &y);
-				sqrt = pow(x, 1.0/y);
-			  	printf("O numero e: %.f\n", sqrt);
+				raiz = pow(x, 1.0/y);
+			  	printf("O numero é: %.2e\n", raiz);
 				break;
 			case 4:
-				printf("pastel muito bom!\n");
+				int ano;
+				printf("Digite o ano para saber se é bissexto\n");
+				scanf("%d", &ano);
+				if(ano % 4 == 0){
+					printf("O ano é bissexto\n");
+				}else{
+					printf("O ano não é bissexto\n");
+				}
 				break;
 			case 5:
-				printf("empada dilicioso!\n");
+				float nota1, nota2, nota3, media;
+				printf("Digite a primeira nota\n");
+				scanf("%f", &nota1);
+				printf("Digite a segunda nota\n");
+				scanf("%f", &nota2);
+				printf("Digite a terceira nota\n");
+				scanf("%f", &nota3);
+				media = (nota1 + nota2 + (nota3 * 2)) / 3;
+				printf("A media é: %.2f\n", media);
+				if(media >= 6){
+					printf("Você foi aprovado!\n");
+				}else{
+					printf("Você foi reprovado!\n");
+				}
 				break;
 			case 6:
-				printf("batata frita saboroso!\n");
+				float prova1, prova2, media2;
+				printf("Digite a primeira nota\n");
+				scanf("%f", &prova1);
+				if(prova1 < 0 || prova1 > 10){
+					printf("Valor inválido");
+					return 0;
+				}
+				printf("Digite a segunda nota\n");
+				scanf("%f", &prova2);
+				if(prova2 < 0 || prova2 > 10){
+					printf("Valor inválido");
+					return 0;
+				}
+				media2 = (prova1 + prova2) / 2;
+				printf("A média é: %.2f\n", media2);
 				break;
 			case 7:
 				printf("suco muito bom!\n");
@@ -76,7 +112,7 @@ int main(){
 				printf("tchau\n");
 				break;
 			default:
-				printf("numero invalido!\n");
+				printf("número inválido!\n");
 				break;
 		}	
 	}while(i != 0);	

@@ -97,7 +97,6 @@ int main(){
 				printf("A média é: %.2f\n", media2);
 				break;
 			case 7:
-				printf("suco muito bom!\n");
 				break;
 			case 8:
 				break;

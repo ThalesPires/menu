@@ -4,11 +4,11 @@
 int main(){
 	
 	int i;
-  int a;
-  float A;
-  int x;
-  int B, resultado;
-  float sqrt, y;
+	int a;
+	float A;
+	int x;
+	int B, resultado;
+	float sqrt, y;
 	
 	do	
 	{
@@ -18,8 +18,8 @@ int main(){
 		scanf("%d", &i);	
 		switch(i){
 			case 1:
-        printf("Digite um numero para vereficar se e par ou nao\n");
-			  scanf("%d", &a);
+        			printf("Digite um numero para vereficar se e par ou nao\n");
+			  	scanf("%d", &a);
 				if(a % 2 == 0){
 				printf("este numero e par!\n");	
 				}
@@ -38,18 +38,18 @@ int main(){
 				scanf("%d", &B);
 				if(B < 0){
 				printf("numero invalido\n");
-			  break;
+			  	break;
 				}
 				resultado = pow(A, B);
-			  printf("O numero em notacao cientifica fica assim: %.2e\n",resultado);
+			  	printf("O numero em notacao cientifica fica assim: %.2e\n",resultado);
 				break;
 			case 3:
-			  printf("Digite o valor de x\n");
+			  	printf("Digite o valor de x\n");
 				scanf("%d", &x);
 				printf("Digite o valor de y\n");
 				scanf("%f", &y);
 				sqrt = pow(x, 1.0/y);
-			  printf("O numero e: %.f\n", sqrt);
+			  	printf("O numero e: %.f\n", sqrt);
 				break;
 			case 4:
 				printf("pastel muito bom!\n");

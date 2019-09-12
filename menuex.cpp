@@ -16,7 +16,7 @@ int main(){
 		switch(i){
 			case 1:
 				int a;
-        			printf("Digite um numero para vereficar se é par ou nao\n");
+        		printf("Digite um numero para vereficar se é par ou nao\n");
 			  	scanf("%d", &a);
 				if(a % 2 == 0){
 				printf("este numero é par!\n");	
@@ -100,13 +100,10 @@ int main(){
 				printf("suco muito bom!\n");
 				break;
 			case 8:
-				printf("coca cola refrescante!\n");
 				break;
 			case 9:
-				printf("guarana refrescante!\n");
 				break;
 			case 10:
-				printf("matricula em hexadecimal\n");
 				break;
 			case 0:
 				printf("tchau\n");
@@ -115,5 +112,5 @@ int main(){
 				printf("número inválido!\n");
 				break;
 		}	
-	}while(i != 0);	
+	}while(i != 0);
 }

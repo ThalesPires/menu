@@ -9,20 +9,20 @@ int main(){
 	
 	do	
 	{
-		printf("Digite um numero\n0 - sair\n1 - verificar se é par\n"
-		"2 - elevar um número\n3 - Verificar a raiz\n4 - pastel\n5 - empada\n"
-		"6 - batata frita\n7 - suco\n8 - coca cola\n9 - guarana\n10 - matricula em hexadecimal\n");
+		printf("Digite um numero\n0 - sair\n1 - Verificar um número é par\n"
+		"2 - Elevar um número\n3 - Verificar a raiz\n4 - Verificar se o ano é bissexto\n5 - Média ponderada\n"
+		"6 - Verificar número válido em média\n7 - //\n8 - //\n9 - //\n10 - Matricula em hexadecimal\n");
 		scanf("%d", &i);	
 		switch(i){
 			case 1:
 				int a;
-        		printf("Digite um numero para vereficar se é par ou nao\n");
+        			printf("Digite um numero para vereficar se é par ou nao\n");
 			  	scanf("%d", &a);
 				if(a % 2 == 0){
-				printf("este numero é par!\n");	
+				printf("Este numero é par!\n");	
 				}
 				else{
-				printf("este numero é impar!\n");
+				printf("Este numero é impar!\n");
 				}
 				break;
 			case 2:
@@ -31,13 +31,13 @@ int main(){
 				printf("Digite o valor de A\n");
 				scanf("%f", &A);
 				if(A < 0){
-				printf("número invalido\n");
+				printf("Número invalido\n");
 				break;
 				}
 				printf("Digite o valor de B\n");
 				scanf("%d", &B);
 				if(B < 0){
-				printf("número inválido\n");
+				printf("Número inválido\n");
 			  	break;
 				}
 				resultado = pow(A, B);
@@ -72,7 +72,7 @@ int main(){
 				printf("Digite a terceira nota\n");
 				scanf("%f", &nota3);
 				media = (nota1 + nota2 + (nota3 * 2)) / 3;
-				printf("A media é: %.2f\n", media);
+				printf("A média é: %.2f\n", media);
 				if(media >= 6){
 					printf("Você foi aprovado!\n");
 				}else{
@@ -86,12 +86,16 @@ int main(){
 				if(prova1 < 0 || prova1 > 10){
 					printf("Valor inválido");
 					return 0;
+				}else{
+					printf("Valor válido\n");
 				}
 				printf("Digite a segunda nota\n");
 				scanf("%f", &prova2);
 				if(prova2 < 0 || prova2 > 10){
 					printf("Valor inválido");
 					return 0;
+				}else{
+					printf("Valor válido\n");
 				}
 				media2 = (prova1 + prova2) / 2;
 				printf("A média é: %.2f\n", media2);
@@ -103,13 +107,22 @@ int main(){
 			case 9:
 				break;
 			case 10:
+				char nome[100];
+				int hex;
+				printf("Digite seu nome\n");
+				scanf("%s", nome);
+				printf("Número da sua matricula\n");
+				scanf("%d", &hex);
+				printf("Seu nome é: %s\n", nome);
+				printf("Número da sua matricula em hexadecimal: %x\n", hex);
 				break;
 			case 0:
-				printf("tchau\n");
+				printf("Tchau\n");
 				break;
 			default:
-				printf("número inválido!\n");
+				printf("Número inválido!\n");
 				break;
 		}	
 	}while(i != 0);
+	return 0;
 }

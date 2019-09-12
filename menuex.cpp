@@ -124,5 +124,4 @@ int main(){
 				break;
 		}	
 	}while(i != 0);
-	return 0;
 }

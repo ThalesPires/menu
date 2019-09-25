@@ -9,9 +9,16 @@ int main(){
 	
 	do	
 	{
-		printf("Digite um numero\n0 - sair\n1 - Verificar um número é par\n"
-		"2 - Elevar um número\n3 - Verificar a raiz\n4 - Verificar se o ano é bissexto\n5 - Média ponderada\n"
-		"6 - Verificar número válido em média\n7 - //\n8 - //\n9 - //\n10 - Matricula em hexadecimal\n");
+		printf(	"Digite um numero\n"
+		      	"0 - sair\n"
+		      	"1 - Verificar se um número é par\n"
+			"2 - Elevar um número\n"
+		      	"3 - Verificar a raiz\n4 - Verificar se o ano é bissexto\n5 - Média ponderada\n"
+			"6 - Verificar número válido em média\n"
+		      	"7 - //"
+		      	"\n8 - Verificar se o número é primo\n"
+		      	"9 - //\n"
+		      	"10 - Matricula em hexadecimal\n");
 		scanf("%d", &i);	
 		switch(i){
 			case 1:
@@ -19,10 +26,10 @@ int main(){
         			printf("Digite um numero para vereficar se é par ou nao\n");
 			  	scanf("%d", &a);
 				if(a % 2 == 0){
-				printf("Este numero é par!\n");	
+					printf("Este numero é par!\n");	
 				}
 				else{
-				printf("Este numero é impar!\n");
+					printf("Este numero é impar!\n");
 				}
 				break;
 			case 2:
@@ -31,14 +38,14 @@ int main(){
 				printf("Digite o valor de A\n");
 				scanf("%f", &A);
 				if(A < 0){
-				printf("Número invalido\n");
-				break;
+					printf("Número invalido\n");
+					break;
 				}
 				printf("Digite o valor de B\n");
 				scanf("%d", &B);
 				if(B < 0){
-				printf("Número inválido\n");
-			  	break;
+					printf("Número inválido\n");
+			  		break;
 				}
 				resultado = pow(A, B);
 			  	printf("O numero em notação científica é: %.2e\n",resultado);
@@ -103,11 +110,24 @@ int main(){
 			case 7:
 				break;
 			case 8:
+				int n1, n2;
+				printf("Digite um numero para saber se e primo: ");
+				scanf("%d", &n1);
+				for(n2 = n1; n2 > 0; n2--){
+					if(n1 % n2 == 0 && n1 != n2 || n1 == 1){
+						printf("O numero nao e primo\n");
+						break;
+					}
+					else if(n2 == 2){
+						printf("O numero e primo\n");
+						break;
+					}
+				}
 				break;
 			case 9:
 				break;
 			case 10:
-				char nome[100];
+				char nome[10];
 				int hex;
 				printf("Digite seu nome\n");
 				scanf("%s", nome);

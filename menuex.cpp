@@ -13,10 +13,12 @@ int main(){
 		      	"0 - sair\n"
 		      	"1 - Verificar se um número é par\n"
 			"2 - Elevar um número\n"
-		      	"3 - Verificar a raiz\n4 - Verificar se o ano é bissexto\n5 - Média ponderada\n"
+		      	"3 - Verificar a raiz\n
+		       	"4 - Verificar se o ano é bissexto\n"
+		       	"5 - Média ponderada\n"
 			"6 - Verificar número válido em média\n"
-		      	"7 - //"
-		      	"\n8 - Verificar se o número é primo\n"
+		      	"7 - Calcular número fatorial"
+		      	"8 - Verificar se o número é primo\n"
 		      	"9 - //\n"
 		      	"10 - Matricula em hexadecimal\n");
 		scanf("%d", &i);	
@@ -108,6 +110,18 @@ int main(){
 				printf("A média é: %.2f\n", media2);
 				break;
 			case 7:
+				int num;
+				int fat2;
+				fat2 = 1;
+				int fatorial;
+				fatorial = 1;
+				printf("Digite o número que deseja calcular o fatorial: ");
+				scanf("%d", &num);
+				do{
+					fatorial = fatorial * fat2;
+					fat2++;
+				}while(fat2 <= num);
+				printf("O resultado é %d\n", fatorial);
 				break;
 			case 8:
 				int n1, n2;

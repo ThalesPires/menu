@@ -19,13 +19,13 @@ int main(){
 			"6 - Verificar número válido em média\n"
 		      	"7 - Calcular número fatorial\n"
 		      	"8 - Verificar se o número é primo\n"
-		      	"9 - //\n"
+		      	"9 - Fibonacci\n"
 		      	"10 - Matricula em hexadecimal\n");
 		scanf("%d", &i);	
 		switch(i){
 			case 1:
 				int a;
-        			printf("Digite um numero para vereficar se é par ou nao\n");
+        			printf("Digite um numero para vereficar se é par ou nao: ");
 			  	scanf("%d", &a);
 				if(a % 2 == 0){
 					printf("Este numero é par!\n");	
@@ -37,13 +37,13 @@ int main(){
 			case 2:
 				float A;
 				int B, resultado;
-				printf("Digite o valor de A\n");
+				printf("Digite o valor de A: ");
 				scanf("%f", &A);
 				if(A < 0){
-					printf("Número invalido\n");
+					printf("Número invalido: ");
 					break;
 				}
-				printf("Digite o valor de B\n");
+				printf("Digite o valor de B: ");
 				scanf("%d", &B);
 				if(B < 0){
 					printf("Número inválido\n");
@@ -55,16 +55,16 @@ int main(){
 			case 3:
 				int x;
 				float y, raiz;
-				printf("Digite o valor de x\n");
+				printf("Digite o valor de x: ");
 				scanf("%d", &x);
-				printf("Digite o valor de y\n");
+				printf("Digite o valor de y: ");
 				scanf("%f", &y);
 				raiz = pow(x, 1.0/y);
 			  	printf("O numero é: %.2e\n", raiz);
 				break;
 			case 4:
 				int ano;
-				printf("Digite o ano para saber se é bissexto\n");
+				printf("Digite o ano para saber se é bissexto: ");
 				scanf("%d", &ano);
 				if(ano % 4 == 0){
 					printf("O ano é bissexto\n");
@@ -74,11 +74,11 @@ int main(){
 				break;
 			case 5:
 				float nota1, nota2, nota3, media;
-				printf("Digite a primeira nota\n");
+				printf("Digite a primeira nota: ");
 				scanf("%f", &nota1);
-				printf("Digite a segunda nota\n");
+				printf("Digite a segunda nota: ");
 				scanf("%f", &nota2);
-				printf("Digite a terceira nota\n");
+				printf("Digite a terceira nota: ");
 				scanf("%f", &nota3);
 				media = (nota1 + nota2 + (nota3 * 2)) / 3;
 				printf("A média é: %.2f\n", media);
@@ -90,7 +90,7 @@ int main(){
 				break;
 			case 6:
 				float prova1, prova2, media2;
-				printf("Digite a primeira nota\n");
+				printf("Digite a primeira nota: ");
 				scanf("%f", &prova1);
 				if(prova1 < 0 || prova1 > 10){
 					printf("Valor inválido");
@@ -98,7 +98,7 @@ int main(){
 				}else{
 					printf("Valor válido\n");
 				}
-				printf("Digite a segunda nota\n");
+				printf("Digite a segunda nota: ");
 				scanf("%f", &prova2);
 				if(prova2 < 0 || prova2 > 10){
 					printf("Valor inválido");
@@ -139,13 +139,33 @@ int main(){
 				}
 				break;
 			case 9:
+				int nume;
+				int fib3;
+				int fib1;
+				fib1 = 0;
+				int fib2;
+				fib2 = 1;
+				printf("Digite um número para a sequência fibonacci: ");
+				scanf("%d", &nume);
+				if(nume < 0){
+					printf("Número inválido\n");
+				}else{
+					printf("0 1");
+				}
+				while (fib2 < nume){
+					fib3 = fib2 + fib1;
+					printf(" %d ", fib3);
+					fib1 = fib2;
+					fib2 = fib3;
+				}
+				printf("\n");
 				break;
 			case 10:
 				char nome[10];
 				int hex;
-				printf("Digite seu nome\n");
+				printf("Digite seu nome: ");
 				scanf("%s", nome);
-				printf("Número da sua matricula\n");
+				printf("Número da sua matricula: ");
 				scanf("%d", &hex);
 				printf("Seu nome é: %s\n", nome);
 				printf("Número da sua matricula em hexadecimal: %x\n", hex);

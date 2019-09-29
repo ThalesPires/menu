@@ -13,7 +13,7 @@ int main(){
 		      	"0 - sair\n"
 		      	"1 - Verificar se um número é par\n"
 			"2 - Elevar um número\n"
-		      	"3 - Verificar a raiz\n
+		      	"3 - Verificar a raiz\n"
 		       	"4 - Verificar se o ano é bissexto\n"
 		       	"5 - Média ponderada\n"
 			"6 - Verificar número válido em média\n"

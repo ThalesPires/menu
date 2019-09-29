@@ -17,7 +17,7 @@ int main(){
 		       	"4 - Verificar se o ano é bissexto\n"
 		       	"5 - Média ponderada\n"
 			"6 - Verificar número válido em média\n"
-		      	"7 - Calcular número fatorial"
+		      	"7 - Calcular número fatorial\n"
 		      	"8 - Verificar se o número é primo\n"
 		      	"9 - //\n"
 		      	"10 - Matricula em hexadecimal\n");
